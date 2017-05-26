@@ -9,8 +9,7 @@ in your protractor conf file add this:
 ```javascript
   plugins: [
     {
-      path: '../node_modules/protractor-e2e-coverage/index.js',
-      outdir: 'test/coverage'
+      package: 'protractor-e2e-coverage'
     }
   ],
 ```
@@ -20,9 +19,9 @@ coverage setup comes predefined with what elements and events to listen to and r
 it's possible to set this up with the following command
 ```javascript
   plugins: [
-	{
-      elements: [ 
-      	// add one for each DOM type
+  {
+      elements: [
+        // add one for each DOM type
         {
           'type': 'button',
           'events': ['click'], // array of events to listen to
